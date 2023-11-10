@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+      background-color: #FFA500; 
+      color: #333; 
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      flex-direction: column; 
+    }
+
+    .banner {
+      width: 100%;
+      background-color: #FF8C00;
+      padding: 10px;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    h1 {
+      color: white; 
+    }
+
+    .paragraph {
+      margin-top: 20px;
+    }
+
+    .items-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 16px;
+      justify-content: center; 
+    }
+
+    .item {
+      max-width: 200px;
+      padding: 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+
+    .banner-links {
+      margin-top: 10px;
+    }
+
+    .banner-links a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>Welcome to the Home Page</h1>
+    <div class="banner-links">
+      <a href="/login">Login</a>
+      <a href="/signup">Sign Up</a>
+    </div>
+  </div>
+
+  <p class="paragraph">Here are some items for you to buy:</p>
+
+  <div class="items-container">
+    <div class="item">
+      <h2>Item 1</h2>
+      <p>Description for Item 1</p>
+    </div>
+    <div class="item">
+      <h2>Item 2</h2>
+      <p>Description for Item 2</p>
+    </div>
+    <div class="item">
+      <h2>Item 3</h2>
+      <p>Description for Item 3</p>
+    </div>
+    <div class="item">
+      <h2>Item 4</h2>
+      <p>Description for Item 4</p>
+    </div>
+  </div>
+
+</body>
+</html>

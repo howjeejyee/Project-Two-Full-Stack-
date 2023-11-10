@@ -1,24 +1,10 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(process.env.DATABASE_URL);
-
-connect.then(() => {
-    console.log('Database connected');
-})
-.catch(() => {
-    console.log('Database not connected');
+console.log(process.env.DATABASE_URL);
+const db = mongoose.connection;
+console.log(db);
+db.on('connected', function(){
+    console.log(`Connected to MongoDB ${db.name} at ${db.host}:${db.port}`);
 });
 
-const userSchema = new mongoose.Schema({
-    username: {
-        type: String,
-        required: true
-    },
-    password: {
-        type: String,
-        required: true
-    },
-});
-
-const users = new mongoose.model("User", userSchema);
-module.exports = users;

@@ -12,7 +12,7 @@
       justify-content: center;
       height: 100vh;
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif; 
       background-color: #FFA500; 
       color: #333; 
       text-align: center;
@@ -55,9 +55,17 @@
       text-decoration: none;
       margin-top: 20px; 
     }
+
+    .back-button {
+      font-size:30px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
   </style>
 </head>
 <body>
+  <a class="back-button" href="/">Back</a>
   <h1>Login Page</h1>
   <form method="post" action="/login">
     <label for="username">Username:</label>

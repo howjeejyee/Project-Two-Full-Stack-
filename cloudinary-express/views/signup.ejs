@@ -55,9 +55,17 @@
       text-decoration: none;
       margin-top: 20px; 
     }
+
+    .back-button {
+      font-size:30px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
   </style>
 </head>
 <body>
+  <a class="back-button" href="/">Back</a>
   <h1>Sign Up</h1>
   <form method="post" action="/signup">
     <label for="newUsername">Username:</label>
@@ -69,6 +77,6 @@
     <input type="submit" value="Sign Up">
   </form>
 
-  <p>Already have an account? <a href="/">Login</a></p>
+  <p>Already have an account? <a href="/login">Login</a></p>
 </body>
 </html>
