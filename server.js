@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bcrypt = require('bcrypt');
-const users = require('./config/database');
+const users = require('./cloudinary-express/config/database');
 const app = express();
 
 app.use(express.json());
