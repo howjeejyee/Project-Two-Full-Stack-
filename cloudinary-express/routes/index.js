@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
+var indexController = require('../controller/index.js');
+var auth = require('../middleware/auth');
 
-
-router.get('/', function(req, res, next) {
-  res.render('home', { title: 'Home Page' });
-});
+router.use(auth);
+router.get('/', indexController.renderHome);
 
 module.exports = router;
+

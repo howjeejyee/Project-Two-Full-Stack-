@@ -1,11 +1,135 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+      background-color: #FFA500; 
+      color: #333; 
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      flex-direction: column; 
+    }
+
+    .banner {
+      width: 100%;
+      background-color: #FF8C00;
+      padding: 10px;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    h1 {
+      color: white; 
+      font-size: 48px;
+      font-style: bold;
+    }
+
+    .subheader {
+      color: white;
+      margin-top: 5px;
+      font-size: 18px;
+      font-style: italic;
+    }
+
+    .paragraph {
+      margin-top: 20px;
+      font-size: 22px;
+    }
+
+    .items-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 16px;
+      justify-content: center; 
+    }
+
+    .item {
+      max-width: 200px;
+      padding: 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+
+    .banner-links {
+      margin-top: 10px;
+    }
+
+    .banner-links a {
+      margin: 0 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    p {
+      margin-top: 20px;
+      font-size: 22px;
+      color: white;
+    }
+
+    .buy-sell {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .buy-sell a {
+      margin: 0 20px;
+      padding: 10px 20px;
+      border: 1px solid #fff;
+      border-radius: 8px;
+      background-color: #fff;
+      color: #FF8C00;
+      text-decoration: none;
+      font-size: 18px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .buy-sell-links a:hover {
+      background-color: #FF8C00;
+      color: white;
+    }
+
+    .banner-links a:hover {
+      color: yellow; 
+    }
+    
+    .buy-sell a:hover {
+      background-color: #FF8C00;
+      color: white; 
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <h1>Welcome to YSL</h1>
+    <p class="subheader">Where shopping never ends~</p>
+    <div class="banner-links">
+      <% if (currentUser) { %>
+        <a href="/logout">Logout</a>
+      <% } else { %>
+        <a href="/login">Login</a>
+        <a href="/signup">Sign Up</a>
+      <% } %>
+    </div>
+
+  <p class="paragraph">Please Select:</p>
+
+  <div class="buy-sell">
+    <a href="/buy">Buy</a>
+    <a href="/sell">Sell</a>
+  </div>
+
+</body>
 </html>
